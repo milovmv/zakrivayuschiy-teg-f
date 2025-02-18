@@ -13,4 +13,213 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" var(--main-font-weight);
+  background-color: grey;
 }
+
+.header {
+  margin-block: 100px;
+}
+
+.header_logo_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  block-size: clamp(20.438rem, 14.604rem + 13.99vw, 23rem);
+  inline-size: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
+  margin-inline: auto;
+  background-color: white;
+  border: 2px solid black;
+  font-family: var(--accent-font);
+}
+
+.header_logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header_title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  inline-size: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
+  margin-inline: auto;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 18px;
+  margin-block: 50px;
+}
+
+.main_header {
+  font-size: 18px;
+  --main-font-weight: 700;
+  font-variation-settings: "wght" var(--main-font-weight);
+  padding-block: 3px;
+  padding-inline-start: 10px;
+}
+
+.main_image {
+  position: relative;
+  block-size: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
+  background-size: cover;
+  border-block: 2px solid black;
+}
+
+.main_image_first {
+  background-image: url('../images/bus1.svg');
+}
+
+.main_image_second {
+  background-image: url('../images/bus2.svg')
+}
+
+.main_image_third {
+  background-image: url('../images/bus3.svg')
+}
+
+.main_image_fourth {
+  background-image: url('../images/bus4.svg')
+}
+
+.main_image_fifth {
+  background-image: url('../images/bus5.svg')
+}
+
+.main_image_sixth {
+  background-image: url('../images/bus6.svg')
+}
+
+.main_image_seventh {
+  background-image: url('../images/bus7.svg')
+}
+
+.main_image_eighth {
+  background-image: url('../images/bus8.svg')
+}
+
+.main_label {
+  color: black;
+  opacity: 50%;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  mix-blend-mode: hard-light;
+  text-shadow: 1px 0px 0 rgba(255, 255, 255), -1px 0px 0 rgba(255, 255, 255), 0px 1px 0 rgba(255, 255, 255), 0px -1px 0 rgba(255, 255, 255);
+  
+}
+
+.main_information {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+}
+
+.main_information_text {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.card_button {
+  display: flex;
+  align-self: flex-end;
+  justify-items: center;
+}
+
+.card__icon-button {
+  height: 36px;
+  width: 39px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.card__like-button {
+  padding: 0;
+  width: 130px;
+  height: 38px;
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+.card__save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-inline: auto;
+  width: 335px;
+  height: 55px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.button__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 90%;
+}
+
+.floppy_icon {
+  color: black;
+  min-width: 31px;
+  min-height: 31px;
+  align-self: center;
+}
+
+dialog[open] .dialog_descripion {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.dialog__text {
+  font-family: var(--accent-font);
+  line-height: 150%;
+  font-size: 14px;
+  text-transform: uppercase;
+  max-width: 234px;
+}
+
+.dialog_button {
+  font-family: var(--accent-font);
+  padding: 0;
+  height: 38px;
+  font-size: 14px;
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+dialog[open] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 191px;
+  width: 353px;
+  padding: 30px 30px;
+  position: fixed;
+  inset: 0;
+} 
+
+
+dialog::backdrop {
+  background: black;
+  opacity: 75%;
+}
+
+@media (width <= 375px) {
+  .header_logo_section {
+    width: 100%;
+  }
+}
+
