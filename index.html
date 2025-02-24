@@ -11,8 +11,47 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header">
+      <span class="header__logo">&lt;/HTML&gt;</span>
+      <h1 class="header__title">закрывающий тег</h1>
+    </header>
+    <main>
+      <section class="main">
+        <h2 class="main__header">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </h2>
+        <div class="main__image main__image-first"> 
+          <span class="main__label">&lt;/HTML&gt;</span>
+        </div>
+        <div class="main__information">
+          <article class="main__information-text">
+            <p>
+              Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
+            </p>
+            <p>
+              Место для ваших воспоминаний о начале обучения.
+            </p>
+          </article>
+          <div class="card__button">
+            <button class="card__icon-button">
+              <img class="like-icon" src="./svg/heart in paths.svg">
+            </button>
+            <button class="card__like-button">
+              <span class="button__text button__text-like">Like</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <button class="card__save-button"
+              type="button" 
+              onclick="window['dialog-id'].showModal()" 
+              aria-controls="dialog-id">
+        <svg class="floppy_icon">
+          <use href="./svg/floppy.svg#floopy"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
