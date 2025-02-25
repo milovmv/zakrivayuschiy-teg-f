@@ -1,4 +1,4 @@
-<svg id="floopy" width="21.5" height="21.5" viewBox="0 0 40 40" fill="black" xmlns="http://www.w3.org/2000/svg">
+<svg id="floopy" fill="black" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.5" y="0.5" width="3" height="3" fill="black"/>
 <rect x="0.5" y="3.5" width="3" height="3" fill="black"/>
 <rect x="0.5" y="6.5" width="3" height="3" fill="black"/>
