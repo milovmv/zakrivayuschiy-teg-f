@@ -15,6 +15,9 @@
   min-block-size: 100dvb;
   font-family: 'Inter', sans-serif;
   font-size: 18px;
+}
+
+.page__background {
   background: repeating-linear-gradient(0deg, transparent 0px, transparent 2px, #d3d3d3 2px, #d3d3d3 4px),
               repeating-linear-gradient(90deg, transparent 0px, transparent 2px, #d3d3d3 2px, #d3d3d3 4px),
               linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a);
@@ -64,7 +67,6 @@
 
 .main__image-section {
   position: relative;
-
 }
 
 .main__image {
@@ -134,6 +136,7 @@
 .card__button {
   display: flex;
   align-self: flex-end;
+  gap: 5px;
 }
 
 .card__icon-button {
@@ -141,10 +144,11 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
 }
 
 .like-icon {
-
   
 }
 
@@ -152,6 +156,9 @@
   padding: 0;
   background-color: transparent;
   border: 2px solid black;
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
 }
 
 .card__save-button {
@@ -162,28 +169,37 @@
   padding: 14.5px 20px;
   background-color: white;
   border: 2px solid black;
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+
+.card__save-button__icon {
+  fill: white;
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 2;
 }
 
 .card__ok-button {
   padding: 9px 17px;
   background-color: transparent;
   border: 2px solid black;
+  cursor: pointer;
 }
-
 
 .button__text {
   font-family: 'PressStart2P';
   font-size: 14px;
   line-height: 90%;
+  color: white;
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 2;
 }
 
 .button__text-like {
   padding: 10.5px 37px;
-}
-
-.floppy_icon {
-  width: 23px;
-  height: 21px;
 }
 
 .dialog__window[open] {
@@ -207,14 +223,68 @@
 }
 
 .dialog__floppy_icon {
-  width: 39px;
-  height: 39px;
+
   align-self: center;
 }
 
 dialog::backdrop {
   background: black;
   opacity: 75%;
+}
+
+.card__like-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 black;
+}
+
+.card__save-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 black;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: black;
+}
+
+.card__like-button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black; 
+  z-index: 1;
+  height: 100%; 
+  width: 0; 
+  transition: 0.5s ease-in-out; 
+}
+
+
+.card__like-button:hover::after {
+  width: 100%;
+}
+
+.card__save-button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black; 
+  z-index: 1;
+  height: 100%; 
+  width: 0; 
+  transition: 0.5s ease-in-out; 
+}
+
+
+.card__save-button:hover::after {
+  width: 100%; 
+}
+.card__ok-button {
+
 }
 
 @media (width <= 375px) {

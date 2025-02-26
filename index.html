@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
-  <body class="page">
+  <body class="page page__background">
     <header class="header">
       <span class="header__logo">&lt;/HTML&gt;</span>
       <h1 class="header__title">закрывающий тег</h1>
@@ -236,15 +236,15 @@
               type="button" 
               onclick="window['dialog-id'].showModal()" 
               aria-controls="dialog-id">
-        <svg class="floppy_icon">
-          <use href="./svg/floppy.svg#floopy"></use>
+        <svg class="card__save-button__icon" viewbox="0 0 21 21" width="21" height="21">
+          <use href="./svg/floppy1.svg#floopy1"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
       <dialog id="dialog-id" class="dialog__window">
         <div class="dialog__window-info">
-          <svg class="dialog__floppy_icon">
-            <use href="./svg/floppy.svg#floopy"></use>
+          <svg class="dialog__floppy_icon" viewbox="0 0 39 39" width="39" height="39">
+            <use xlink:href="./svg/floppy1.svg#floopy2"></use>
           </svg>
           <span class="dialog__window-text">Вставьте дискету, чтобы продолжить</span>
         </div>
