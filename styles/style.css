@@ -148,10 +148,6 @@
   transition: 0.3s ease;
 }
 
-.like-icon {
-  
-}
-
 .card__like-button {
   padding: 0;
   background-color: transparent;
@@ -285,6 +281,42 @@ dialog::backdrop {
 }
 .card__ok-button {
 
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.main-body {
+  transition: fill 0.3s;
+  fill: transparent;
+}
+
+.core {
+  transition: fill 0.3s 0.03s;
+  fill: transparent;
+}
+
+.like-icon:hover .core {
+  transition: fill 0.3s;
+  fill: var(--heart-color-contour);
+  
+}
+
+.like-icon:hover .main-body {
+  transition: fill 0.3s 0.05s;
+  fill: var(--heart-color-contour);
+}
+
+.like-icon:active .core {
+  transition: fill 0.3s;
+  fill: var(--heart-color-sparks);
+  
+}
+
+.like-icon:active .main-body {
+  transition: fill 0.3s 0.05s;
+  fill: var(--heart-color-sparks);
 }
 
 @media (width <= 375px) {
