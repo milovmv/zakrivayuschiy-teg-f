@@ -67,16 +67,16 @@
   padding-inline-start: 10px;
   font-size: 18px;
   border-bottom: 2px solid black;
+  font-variation-settings: "wght" 700;
 }
 
 .main__image-section {
   position: relative;
+  margin-bottom: -4.55px;
 }
 
 .main__image {
-  background-size: cover;
-  aspect-ratio: 1/1;
-  background-image: url('../svg/bus1.svg');
+  width: 100%;
 }
 
 .main__image-first {
@@ -119,7 +119,19 @@
   top: 25px;
   right: 25px;
   mix-blend-mode: hard-light;
-  text-shadow: 1px 0px 0 rgba(255, 255, 255), -1px 0px 0 rgba(255, 255, 255), 0px 1px 0 rgba(255, 255, 255), 0px -1px 0 rgba(255, 255, 255);
+}
+
+@supports not (-webkit-text-stroke: 1px rgba(255, 255, 255)) {
+  .main__label {
+    text-shadow: 1px 0px 0 rgba(255, 255, 255), -1px 0px 0 rgba(255, 255, 255), 0px 1px 0 rgba(255, 255, 255), 0px -1px 0 rgba(255, 255, 255);
+  }
+}
+
+@supports (-webkit-text-stroke: 1px rgba(255, 255, 255)) or (text-stroke: 1px rgba(255, 255, 255)) {
+  .main__label {
+    -webkit-text-stroke: 1px rgba(255, 255, 255);
+    text-stroke: 1px rgba(255, 255, 255);
+  }
 }
 
 .main__information {
@@ -253,11 +265,11 @@ dialog::backdrop {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: black; 
+  background-color: black;
   z-index: 1;
-  height: 100%; 
-  width: 0; 
-  transition: 0.5s ease-in-out; 
+  height: 100%;
+  width: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .card__like-button:hover::after {
@@ -269,15 +281,15 @@ dialog::backdrop {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: black; 
+  background-color: black;
   z-index: 1;
-  height: 100%; 
-  width: 0; 
-  transition: 0.5s ease-in-out; 
+  height: 100%;
+  width: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .card__save-button:hover::after {
-  width: 100%; 
+  width: 100%;
 }
 
 .sparks {
