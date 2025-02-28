@@ -14,6 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: 'Inter', sans-serif;
+  font-variation-settings: "wght" 400;
   font-size: 18px;
 }
 
@@ -35,16 +36,19 @@
   border: 2px solid black;
   block-size: clamp(20.438rem, 14.604rem + 13.99vw, 23rem);
   inline-size: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
-  font-family: 'PressStart2P';
+  font-family: var(--accent-font), sans-serif;
+  
 }
 
 .header__logo {
   font-size: 65px;
+  font-variation-settings: "wght" 795;
 }
 
 .header__title {
   font-size: 23px;
   text-transform: uppercase;
+  font-variation-settings: "wght" 795;
 }
 
 .main {
@@ -109,7 +113,7 @@
 
 .main__label {
   opacity: 50%;
-  font-family: 'PressStart2P';
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   position: absolute;
   top: 25px;
@@ -187,7 +191,7 @@
 }
 
 .button__text {
-  font-family: 'PressStart2P';
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   line-height: 90%;
   color: white;
@@ -209,7 +213,7 @@
 }
 
 .dialog__window-text {
-  font-family: 'PressStart2P';
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   line-height: 150%;
   width: 234px;
