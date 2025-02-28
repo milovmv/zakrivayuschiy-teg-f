@@ -146,6 +146,7 @@
   background-color: transparent;
   border: 2px solid transparent;
   transition: 0.3s ease;
+
 }
 
 .card__like-button {
@@ -155,6 +156,8 @@
   transition: 0.3s;
   position: relative;
   cursor: pointer;
+  width: 130px;
+  height: 38px;
 }
 
 .card__save-button {
@@ -192,10 +195,6 @@
   mix-blend-mode: difference;
   position: relative;
   z-index: 2;
-}
-
-.button__text-like {
-  padding: 10.5px 37px;
 }
 
 .dialog__window[open] {
@@ -297,10 +296,14 @@ dialog::backdrop {
   fill: transparent;
 }
 
+.contour {
+  transition: fill 0.1s linear;
+  fill: var(--heart-color-contour);
+}
+
 .like-icon:hover .core {
   transition: fill 0.3s;
   fill: var(--heart-color-contour);
-  
 }
 
 .like-icon:hover .main-body {
@@ -318,6 +321,59 @@ dialog::backdrop {
   transition: fill 0.3s 0.05s;
   fill: var(--heart-color-sparks);
 }
+
+.like-icon.is-liked .core {
+  transition: fill 0.3s;
+  fill: var(--heart-color-sparks);
+}
+
+.like-icon.is-liked .main-body {
+  transition: fill 0.3s 0.05s;
+  fill: var(--heart-color-sparks);
+}
+
+.like-icon.is-liked .contour {
+  transition: fill 0.3s 0.06s;
+  fill: var(--heart-color-sparks);
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s 0.1s ease-in;
+  transform-origin: center;
+  }
+
+.like-icon.is-liked .sparks {
+  animation: heart-sparks 0.3s 0.3s ease-in;
+}
+
+@keyframes heart-scale {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes heart-sparks {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 
 @media (width <= 375px) {
   .header__logo {
