@@ -1,7 +1,6 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
     --accent-font: "PressStart2P";
-    
     --heart-color-contour: black;
     --heart-color-sparks: #FF0000;
     --heart-color-main-body: black;
